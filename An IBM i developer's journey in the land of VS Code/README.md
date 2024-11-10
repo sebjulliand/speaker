@@ -34,8 +34,26 @@ Through this walkthrough, you'll learn how to:
 - Define an Object Browser filter ([documentation](https://codefori.github.io/docs/browsers/object-browser/))
 - Edit source code ([documentation](https://codefori.github.io/docs/developing/editing-compiling/))
 
+### Dive deeper!
+- Remote pase Terminal and 5250 emulator can be opened from the bottom status bar
 
-## Code for IBM i IFS Browser 
+![](assets/terminals.png)
+
+- 
+
+## Code for IBM i IFS Browser
+Through this walkthrough, you'll learn how to:
+- Browse the IFS
+- Open streamfiles
+- Change the working directory
+
+### Dive deeper!
+Aside from the usual streamfile actions (create/move/copy/delete), the IFS browser offers some useful features:
+- Download multiple files or folder (select and right-click)
+- Upload from your local file explorer using drag'n'drop
+- Move/copy using drag'n'drop
+- Compare with various items
+
 ## Code for IBM i Actions
 Actions in Code for IBM i is a highly customizable feature. It lets you define and run 5250 or shell commands on various items.
 
@@ -47,6 +65,7 @@ Through this walkthrough, you'll learn how to:
 ### Dive deeper!
 [Click here](https://codefori.github.io/docs/developing/actions/) to check out the related documentation section.
 
+- Define [command profiles](https://codefori.github.io/docs/settings/profiles) to customize actions execution context
 - Each command line starting with `?` will open an input to let you change the command before it gets executed
 - You can define you own action prompt, using text fields and dropdown lists!
 
@@ -65,5 +84,30 @@ OUTPUT(${output|Output|*PRINT,*OUTFILE})
 ![](assets/dropdown.png)
 
 ## RPGLE language tools & linting
+Through this walkthrough, you'll learn how to:
+- Bring the `Outline` view to focus
+- Use content assist
+- Configure the linter
+- Fix errors reported by the linter
+
+### Dive deeper!
+- [Click here](https://codefori.github.io/docs/extensions/rpgle/) to check out the RPG documentation section.
+- [Click here](https://codefori.github.io/docs/extensions/rpgle/linter/) to check out the linter documentation.
+
 ## Local development with ILE
+Through this walkthrough, you'll learn how to:
+- Work on a locally hosted IBM i project
+- Create local actions set tied to this project
+- Use git to manage the project lifecycle
+
+### Dive deeper!
+[Click here](https://codefori.github.io/docs/developing/local/getting-started/) to learn more about local IBM i development.
+
 ## Code for IBM i Tips
+Through this walkthrough, you'll learn how to:
+- Compare source editors
+- Run SQL using the DB2 for i extension
+- Search for source members
+
+### Dive deeper!
+[Check out this section](https://codefori.github.io/docs/tips/protect/) to learn more about preventing source code from being modified, using protected modes.
