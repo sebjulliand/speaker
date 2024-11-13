@@ -122,3 +122,16 @@ Open the [Db2 for i guide](https://codefori.github.io/docs/extensions/db2i/#exec
 The extension comes with a set of SQL examples. To browse the examples, open the Db2 for i view container and then expand the `Examples` view.
 
 ![](assets/db2examples.png)
+
+## Notebooks
+Db2 Notebooks are documents that contain a mix of rich Markdown and executable code snippets (SQL, CL and shell), and accompanying rich output. These are all separated into distinct cells and can be interleaved in any order.
+
+The Db2 for i extension comes with its own set of sample Notebooks.
+
+![](assets/sameplnotebooks.png)
+
+<!-- saved for later
+<details>
+  <summary></summary>
+</details>
+-->
