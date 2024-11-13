@@ -15,7 +15,7 @@ This is a set of extensions to get you started with IBM i development within VS 
 
 [Click here to install it](vscode:extension/HalcyonTechLtd.ibm-i-development-pack)
 
-# 2. Open the walkthroughs
+# 2. Open the Code for IBM i walkthroughs
 There are 6 walkthroughs that are provided by Code for IBM i to help you get started with IBM i development within VS Code.
 
 To open a walkthrough, follow these steps
@@ -106,8 +106,19 @@ Through this walkthrough, you'll learn how to:
 ## Code for IBM i Tips
 Through this walkthrough, you'll learn how to:
 - Compare source editors
-- Run SQL using the DB2 for i extension
+- Run SQL using the Db2 for i extension
 - Search for source members
 
 ### Dive deeper!
 [Check out this section](https://codefori.github.io/docs/tips/protect/) to learn more about preventing source code from being modified, using protected modes.
+
+# 3. Dive into the Db2 for i extension
+## Get started
+The `Db2 for i` extension allows you to run SQL queries right from VS Code. It also includes Visual Explain and supports Notebook.
+
+Open the [Db2 for i guide](https://codefori.github.io/docs/extensions/db2i/#executing-statements) and follow each steps starting from the **Executing statements** chapter.
+
+## Try the examples
+The extension comes with a set of SQL examples. To browse the examples, open the Db2 for i view container and then expand the `Examples` view.
+
+![](assets/db2examples.png)
