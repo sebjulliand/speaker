@@ -130,8 +130,29 @@ The Db2 for i extension comes with its own set of sample Notebooks.
 
 ![](assets/sameplnotebooks.png)
 
-<!-- saved for later
-<details>
-  <summary></summary>
-</details>
--->
+You can run several types of queries in a Notebook. Try these few examples:
+### SQL
+List the total size of each object types in a library.
+```sql
+Select objtype || ' (' || count(objtype) || ')' as label, Sum(OBJSIZE) / 1024 as "Size" FROM TABLE(QSYS2.OBJECT_STATISTICS('QGPL', '*ALL')) Group By objtype Order by "Size" Desc
+```
+Turn it into a bar chart!
+```sql
+-- chart: bar
+-- title: QGPL objects size
+-- y: Kilobytes
+-- hideStatement: true
+Select objtype || ' (' || count(objtype) || ')' as label, Sum(OBJSIZE) / 1024 as "Size" FROM TABLE(QSYS2.OBJECT_STATISTICS('QGPL', '*ALL')) Group By objtype Order by "Size" Desc
+```
+
+### Shell
+Fetch a dad joke! (requires `curl` and `jq` to be installed)
+```shell
+curl -H "Accept: application/json" https://icanhazdadjoke.com | jq ".joke"
+```  
+
+### CL
+Display the current library list
+```
+DSPLIBL
+```
