@@ -145,8 +145,18 @@ Turn it into a bar chart!
 Select objtype || ' (' || count(objtype) || ')' as label, Sum(OBJSIZE) / 1024 as "Size" FROM TABLE(QSYS2.OBJECT_STATISTICS('QGPL', '*ALL')) Group By objtype Order by "Size" Desc
 ```
 
+Fetch a dad joke! 😂
+```sql
+select json_value(response_message, '$.joke' returning varchar(5000)) as joke from table ( qsys2.http_get_verbose('https://icanhazdadjoke.com', json_object( 'headers': json_object('accept': 'application/json' ))));
+```
+
+Open a fortune cookie 🤔
+```sql
+select trim(replace(replace(RESPONSE_MESSAGE, '\n',' '), '\t', ' ')) fortune from table ( qsys2.http_get_verbose('https://api.justyy.workers.dev/api/fortune'));
+```
+
 ### Shell
-Fetch a dad joke! (requires `curl` and `jq` to be installed)
+Fetch a dad joke again! (requires `curl` and `jq` to be installed)
 ```shell
 curl -H "Accept: application/json" https://icanhazdadjoke.com | jq ".joke"
 ```  
