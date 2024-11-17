@@ -7,24 +7,24 @@
 Ctl-Opt Main(JOKESPOOL) dftactgrp(*no);
 
 dcl-f QSYSPRT printer(132) oflind(PageOverflow) prtctl(PrtCtlDS);
-dcl-s PageOverflow ind ;
-dcl-s Count uns(5) ;
-dcl-ds PrtCtlDS qualified len(15) ;
-  SpaceBefore char(3) inz('  0') ;
-  SpaceAfter char(3) inz('  1') ;
-  SkipBefore char(3) inz('  0') ;
-  SkipAfter char(3) inz('  0') ;
-end-ds ;
+dcl-s PageOverflow ind;
+dcl-s Count uns(5);
+dcl-ds PrtCtlDS qualified len(15);
+  SpaceBefore char(3) inz('  0');
+  SpaceAfter char(3) inz('  1');
+  SkipBefore char(3) inz('  0');
+  SkipAfter char(3) inz('  0');
+end-ds;
   
-dcl-ds Output qualified len(132) ;
+dcl-ds Output qualified len(132);
     // Headings
-  Title char(132) pos(1) ;
-  PageWord char(4) pos(82) ;
-  PageChar char(4) pos(86) ;
+  Title char(132) pos(1);
+  PageWord char(4) pos(82);
+  PageChar char(4) pos(86);
     // Details
-  Id char(11) pos(3) ;
-  Joke char(115) pos(16) ;
-end-ds ;
+  Id char(11) pos(3);
+  Joke char(115) pos(16);
+end-ds;
 
 dcl-c PageHeading 'Dad jokes to spooled file';
 dcl-c ColHeading1 '  ID           Joke';
@@ -39,9 +39,9 @@ Dcl-Proc JOKESPOOL;
   dcl-s w_tries int(5);
   
   w_howMany = %int(%trim(e_howMany));
-  NextPage() ;
+  NextPage();
 
-  dow (w_tries < w_howMany) ;
+  dow (w_tries < w_howMany);
     Exec SQL
       select
         json_value(response_message, '$.id' returning varchar(11)),
@@ -55,52 +55,54 @@ Dcl-Proc JOKESPOOL;
         )
       ));
 
-    if (SQLCOD = 0) ;
+    if (SQLCOD = 0);
       WriteOutput();
-      Count += 1 ;
-    endif ;
+      Count += 1;
+    endif;
 
     w_tries +=1;
-  enddo ;
+  enddo;
 
   Clear Output;
   Output.Title = ColHeading2;
   WriteOutput();
   
-  Output.Title = '  Jokes count = ' + %char(Count) ;
+  Output.Title = '  Jokes count = ' + %char(Count);
   WriteOutput();
+
+  Close QSYSPRT;
 End-Proc;
 
-dcl-proc WriteOutput ;
-  if (PageOverflow) ;
-    NextPage() ;
-  endif ;
-  write QSYSPRT Output ;
+dcl-proc WriteOutput;
+  if (PageOverflow);
+    NextPage();
+  endif;
+  write QSYSPRT Output;
 end-proc;
 
-dcl-proc NextPage ;
-  dcl-s PageNumber uns(3) static ;
+dcl-proc NextPage;
+  dcl-s PageNumber uns(3) static;
 
-  if (PageOverflow) ;
-    PrtCtlDS.SkipBefore = '  1' ;
-  endif ;
+  if (PageOverflow);
+    PrtCtlDS.SkipBefore = '  1';
+  endif;
 
-  Output.PageWord = 'Page' ;
-  PageNumber += 1 ;
-  evalr Output.PageChar = %char(PageNumber) ;
+  Output.PageWord = 'Page';
+  PageNumber += 1;
+  evalr Output.PageChar = %char(PageNumber);
 
-  Output.Title = PageHeading ;
-  write QSYSPRT Output ;
-  clear Output ;
+  Output.Title = PageHeading;
+  write QSYSPRT Output;
+  clear Output;
 
-  if (PageOverflow) ;
-    reset PrtCtlDS ;
-    PageOverflow = *off ;
-  endif ;
+  if (PageOverflow);
+    reset PrtCtlDS;
+    PageOverflow = *off;
+  endif;
 
-  Output.Title = ColHeading1 ;
-  write QSYSPRT Output ;
-  Output.Title = ColHeading2 ;
-  write QSYSPRT Output ;
-  clear Output ;
-end-proc ;
+  Output.Title = ColHeading1;
+  write QSYSPRT Output;
+  Output.Title = ColHeading2;
+  write QSYSPRT Output;
+  clear Output;
+end-proc;
