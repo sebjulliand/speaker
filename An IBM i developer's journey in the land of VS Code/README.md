@@ -166,3 +166,5 @@ Display the current library list
 ```
 DSPLIBL
 ```
+
+https://www.rpgpgm.com/2023/09/creating-spool-file-from-modern-rpg.html
