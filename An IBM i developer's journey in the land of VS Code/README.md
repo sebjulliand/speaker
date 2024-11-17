@@ -112,6 +112,37 @@ Through this walkthrough, you'll learn how to:
 ### Dive deeper!
 [Check out this section](https://codefori.github.io/docs/tips/protect/) to learn more about preventing source code from being modified, using protected modes.
 
+## Let's code
+Check out [this SQLRPGLE source file](sources/jokespool.sqlrpgle). It is a simple program that will create a spooled file filled with `X` dad jokes retrieved using a REST API call, `X` being an entry parameter.
+
+1. Create a new empty folder for this new project
+2. Create a `src` folder inside it
+3. Download [the source file](sources/jokespool.sqlrpgle) and put it in the `src` folder.
+4. Open the folder in VS Code
+5. Connect to PUB400
+6. Answer `Yes` when Code for i asks to set the remote work directory
+7. Answer `Run setup` when Code for i offers to setup local actions
+   1. Select `RPG` and `SQL`
+   2. Validate the prompt
+8. Open the source file
+9. Press `ctrl+e`
+10. Select `Create SQLRPGLE program`
+
+The program should have been created in the current ibrary set in the `User Library List` view.
+Let's run it!
+
+1. Open a PASE terminal
+
+![](assets/terminals.png)
+
+2. Run this command
+```
+system "call JOKESPOOL '5'"
+```
+3. Check out the output (and laugh...maybe)
+
+There are three TODOs at the top of the source code; if you feel like it, try to implement them.
+
 # 3. Dive into the Db2 for i extension
 ## Get started
 The `Db2 for i` extension allows you to run SQL queries right from VS Code. It also includes Visual Explain and supports Notebook.
@@ -166,5 +197,3 @@ Display the current library list
 ```
 DSPLIBL
 ```
-
-https://www.rpgpgm.com/2023/09/creating-spool-file-from-modern-rpg.html
