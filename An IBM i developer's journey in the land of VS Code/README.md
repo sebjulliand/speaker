@@ -39,7 +39,7 @@ Through this walkthrough, you'll learn how to:
 
 ![](assets/terminals.png)
 
-- 
+- Connection settings can be opened from there as well
 
 ## Code for IBM i IFS Browser
 Through this walkthrough, you'll learn how to:
@@ -82,6 +82,18 @@ Syntax: `PARM(${id|Label|VALUE1,VALUE2,...})`
 OUTPUT(${output|Output|*PRINT,*OUTFILE})
 ```
 ![](assets/dropdown.png)
+
+Try creating an action to call `DSPOBJD` on a `*FILE` object with the following definition:
+- Command
+```
+DSPFD FILE(&LIBRARY/&NAME) OUTPUT(${output|Output|*PRINT,*OUTFILE}) OUTFILE(${outfile|Output file}) TYPE(${type|Type|*ALL,*BASATR})
+```
+- Extensions: `FILE`
+- Type: `Object`
+- Environment: `ILE`
+- Refresh: `No`
+
+Then try to run it on a `*FILE` object. Maybe you'll need a new Object filter to list some `*FILE` objets... 
 
 ## RPGLE language tools & linting
 Through this walkthrough, you'll learn how to:
