@@ -4,6 +4,7 @@ This is the landing page that will help you get started with IBM i development w
 # Prerequisites
 - VS Code must be installed: [get it here!](https://code.visualstudio.com/download)
 - You must have a PUB400 profile: [signup here](https://pub400.com/cgi/signup.nd/start)
+- OR Connect to i in the Cloud: [click here](http://iopen.iinthecloud.com:8080)
 
 # Get started
 Open VS Code and follow each steps carefully.
