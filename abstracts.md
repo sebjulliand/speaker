@@ -11,5 +11,6 @@ Code for IBM i, the popular open source extension that brings modern IBM i devel
 Ever wondered if you could use Jenkins with IBM i? Guess what, you can! Designing IBM i centric pipelines has never been so easy, thanks to the IBM i pipeline steps plugin. But what about your build artifacts? Seems like they should be hosted somewhere...into an artifact repository like Nexus, perhaps? Join this session to discover why it may be a good idea to build once, store the result of your builds and deploy it many times, to ensure deployment consistency and traceability. And all of this using state of the art open source tools!
 
 # Design your own VS Code extension and extend Code for IBM i
-VS Code marketplace hosts thousands and thousands of extensions. Dozen of developers created extension that extend Code for IBM i. Why not yours? Give it a shot, it's easier than it looks!
-Join this session to learn about the fundamentals of VS Code extension coding, through a live, step by step approach. And then, discover how you can use the API exposed by Code for IBM i to run commands or Db2 for i queries on IBM i.
+VS Code marketplace hosts thousands and thousands of extensions. Dozen of developers created extensions that use extend Code for IBM i. Why not yours? Give it a shot, it's easier than it looks!
+Join this session to learn about the fundamentals of VS Code extension coding, through a live, step by step approach. Discover how you can access the API exposed by Code for IBM i to run commands or Db2 for i queries on IBM i.
+Everybody is welcome, whether you're looking to get started on VS Code extension development or learn new development tricks.
