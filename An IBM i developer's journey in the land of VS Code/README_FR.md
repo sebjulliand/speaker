@@ -3,8 +3,7 @@ Ceci est la page d’accueil qui vous aidera à démarrer le développement IBM 
 
 # Prérequis
 - VS Code doit être installé : [téléchargez-le ici !](https://code.visualstudio.com/download)
-- Vous devez avoir un profil PUB400 : [inscription ici](https://pub400.com/cgi/signup.nd/start)
-- OU se connecter à i in the Cloud : [cliquez ici](http://iopen.iinthecloud.com:8080)
+- Connectez vous à i in the Cloud : [cliquez ici](http://iopen.iinthecloud.com:8080)
 
 # Commencer
 Ouvrez VS Code et suivez attentivement chaque étape.
@@ -14,22 +13,22 @@ Ouvrez VS Code et suivez attentivement chaque étape.
 
 Il s’agit d’un ensemble d’extensions pour vous aider à démarrer le développement IBM i dans VS Code. Il inclut Code for IBM i, DB2 for IBM i, la coloration RPG/CL/COBOL et quelques autres fonctionnalités.
 
-[Cliquer ici pour l’installer](vscode:extension/HalcyonTechLtd.ibm-i-development-pack)
+[Cliquez ici pour l’installer](vscode:extension/HalcyonTechLtd.ibm-i-development-pack)
 
-# 2. Ouvrir les parcours guidés Code for IBM i
-Six parcours guidés sont fournis par Code for IBM i pour vous aider à commencer le développement IBM i dans VS Code.
+# 2. Ouvrir les _walkthroughs_ (visites guidés) de Code for IBM i
+Six _walkthroughs_ sont fournis par Code for IBM i pour vous aider à commencer le développement IBM i dans VS Code.
 
-Pour ouvrir un parcours guidé, suivez ces étapes
+Pour ouvrir un _walkthrough_, suivez ces étapes
 1. Appuyez sur F1
-2. Dans la palette de commandes, tapez `open walkthrough` et cliquez sur Welcome: `Open Walkthrough...`
+2. Dans la palette de commandes, tapez `open walkthrough` et cliquez sur `Welcome: Open Walkthrough...`
 ![](assets/openwalkthrough.png)
-3. Filtrez les parcours en tapant `code for ibm i`.
+3. Filtrez les _walkthroughs_ en tapant `code for ibm i`.
 ![](assets/filterwalkthroughs.png)
-4. Cliquez sur un parcours pour l’ouvrir et commencer
+4. Cliquez sur un _walkthrough_ pour l’ouvrir et commencer
 
-Les parcours doivent être suivis dans l’ordre suivant:
+Les _walkthroughs_ doivent être suivis dans l’ordre suivant:
 ## Getting Started with Code for IBM i
-À travers ce parcours, vous apprendrez à:
+À travers ce _walkthrough_, vous apprendrez à:
 - Créer une connexion
 - Se connecter à un IBM i
 - Définir un filtre dans l’Object Browser ([documentation](https://codefori.github.io/docs/browsers/object-browser/))
@@ -43,7 +42,7 @@ Les parcours doivent être suivis dans l’ordre suivant:
 - Les paramètres de connexion peuvent aussi être ouverts depuis là.
 
 ## Code for IBM i IFS Browser
-À travers ce parcours, vous apprendrez à:
+À travers ce _walkthrough_, vous apprendrez à:
 - Parcourir l’IFS
 - Ouvrir des streamfiles
 - Changer le répertoire de travail
@@ -58,7 +57,7 @@ En plus des actions habituelles (créer/move/copy/delete), le navigateur IFS off
 ## Code for IBM i Actions
 Les actions dans Code for IBM i sont une fonctionnalité hautement personnalisable. Elles permettent de définir et d’exécuter des commandes 5250 ou shell sur divers éléments.
 
-À travers ce parcours, vous apprendrez à:
+À travers ce _walkthrough_, vous apprendrez à:
 - Accéder aux actions
 - Créer ou éditer des actions
 - Exécuter les actions
@@ -66,7 +65,7 @@ Les actions dans Code for IBM i sont une fonctionnalité hautement personnalisab
 ### Pour aller plus loin!
 [Cliquer ici](https://codefori.github.io/docs/developing/actions/) pour lire la section de documentation associée.
 
-- Définir des [profils de commandes](https://codefori.github.io/docs/settings/profiles) pour personnaliser les contextes d'exécution
+- Définir des [profils](https://codefori.github.io/docs/settings/profiles) pour personnaliser les contextes d'exécution
 - Chaque ligne de commande commençant par `?` ouvrira une saisie vous permettant de modifier la commande avant exécution
 - Vous pouvez définir votre propre prompt, avec champs texte et listes déroulantes!
 
@@ -97,7 +96,7 @@ DSPFD FILE(&LIBRARY/&NAME) OUTPUT(${output|Output|*PRINT,*OUTFILE}) OUTFILE(${ou
 Essayez ensuite de l’exécuter sur un objet `*FILE`. Peut-être aurez-vous besoin d’un nouveau filtre pour lister quelques objets `*FILE`...
 
 ## RPGLE language tools & linting
-À travers ce parcours, vous apprendrez à:
+À travers ce _walkthrough_, vous apprendrez à:
 - Mettre la vue `Outline` en avant
 - Utiliser l’assistance au contenu
 - Configurer le linter
@@ -108,7 +107,7 @@ Essayez ensuite de l’exécuter sur un objet `*FILE`. Peut-être aurez-vous bes
 - [Cliquer ici](https://codefori.github.io/docs/extensions/rpgle/linter/) pour la documentation du linter
 
 ## Local development with ILE
-À travers ce parcours, vous apprendrez à:
+À travers ce _walkthrough_, vous apprendrez à:
 - Travailler sur un projet IBM i hébergé localement
 - Créer un ensemble d’actions locales liées à ce projet
 - Utiliser Git pour gérer le cycle de vie du projet
@@ -117,22 +116,22 @@ Essayez ensuite de l’exécuter sur un objet `*FILE`. Peut-être aurez-vous bes
 [Cliquer ici](https://codefori.github.io/docs/developing/local/getting-started/) pour en savoir plus sur le développement local IBM i.
 
 ## Code for IBM i Tips
-À travers ce parcours, vous apprendrez à:
+À travers ce _walkthrough_, vous apprendrez à:
 - Comparer des éditeurs source
 - Exécuter du SQL via l’extension Db2 for i
 - Rechercher des membres source
 
 ### Pour aller plus loin!
-[Voir cette section](https://codefori.github.io/docs/tips/protect/) pour apprendre à empêcher vos sources d’être modifiées grâce aux modes protégés.
+[Voir cette section](https://codefori.github.io/docs/tips/protect/) pour découvrir comment protéger vos sources contre les modifications.
 
 ## Codons
-Consultez [ce fichier SQLRPGLE](sources/jokespool.sqlrpgle). C’est un petit programme qui crée un fichier spoulé rempli de blagues de papa `X` récupérées via une API REST, `X` étant un paramètre d’entrée.
+Consultez [ce fichier SQLRPGLE](sources/jokespool.sqlrpgle). C’est un petit programme qui crée un fichier spoule avec `X` blagues de papa récupérées via une API REST, `X` étant le premier et seul paramètre d’entrée du programme.
 
 1. Créez un nouveau dossier vide pour le projet
 2. Créez un dossier `src` à l’intérieur
 3. Téléchargez [le fichier source](sources/jokespool.sqlrpgle) et placez-le dans `src`
 4. Ouvrez le dossier dans VS Code
-5. Connectez-vous à PUB400
+5. Connectez-vous
 6. Répondez `Yes` quand Code for i vous propose de définir le répertoire de travail distant
 7. Répondez `Run setup` quand Code for i propose de configurer les actions locales
    1. Sélectionnez `RPG` et `SQL`
@@ -194,7 +193,7 @@ Récupérer une blague de papa! 😂
 select json_value(response_message, '$.joke' returning varchar(5000)) as joke from table ( qsys2.http_get_verbose('https://icanhazdadjoke.com', json_object( 'headers': json_object('accept': 'application/json' ))));
 ```
 
-Ouvrir un cookie de fortune 🤔
+Ouvrir un fortune cookie 🤔
 ```sql
 select trim(replace(replace(RESPONSE_MESSAGE, '\n',' '), '\t', ' ')) fortune from table ( qsys2.http_get_verbose('https://api.justyy.workers.dev/api/fortune'));
 ```
