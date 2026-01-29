@@ -26,3 +26,9 @@ npm i
 ![](images/helloworld.png)
 - Press Enter
 - A notification shows up and says Hello: success!
+
+## Step 1: implement a simple "Run CL Command" command
+## Step 2: add an action in the Object Browser and use CustomUI to display things
+## Step 3: add another action in the Object Browser and create a submenu
+## Step 4: create a simple spooled files browser using `vscode.window` API
+## Step 5: create a Job browser using VS Code Tree View API 
