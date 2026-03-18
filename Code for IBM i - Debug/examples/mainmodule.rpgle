@@ -13,8 +13,16 @@ Dcl-Proc DEBUGMETOO;
   end-ds;
 
   dcl-s libraryCount int(5);
+  dcl-s index int(5);
+  dcl-s buffer Char(2750) Based(pBuffer);
 
-  libraryCount = %lookup('          ':library_list(*).library);
+  pBuffer = %Addr(library_list);
+  GetLibraryList(buffer);
+  libraryCount = %lookup('          ':library_list(*).library) - 1;
 
-  snd-msg 'There are ' + %char(libraryCount) + 'libraries in the list';
+  snd-msg 'There are ' + %char(libraryCount) + ' libraries in the list';
+
+  for index = 1 to libraryCount;
+    snd-msg 'Library ' + %char(index) + ' : ' + library_list(index);
+  endFor;
 End-Proc;

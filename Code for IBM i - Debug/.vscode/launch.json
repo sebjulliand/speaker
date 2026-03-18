@@ -14,8 +14,8 @@
 			"host": "seiden.iinthecloud.com",
 			"port": 8005,
 			"library": "SJULLIAND",
-			"program": "DEBUGME",
-			"startBatchJobCommand": "SBMJOB CMD(CALL PGM(SJULLIAND/DEBUGME) PARM('HELLO'))",
+			"program": "DEBUGMETOO",
+			"startBatchJobCommand": "SBMJOB CMD(CALL PGM(SJULLIAND/DEBUGMETOO))",
 			"updateProductionFiles": false
 		}
   ]

@@ -21,7 +21,7 @@ create or replace function ifs_path (
   no external action
   reads sql data
   not fenced
-  set option COMMIT = *NONE
+  set option COMMIT = *NONE, DBGVIEW = *SOURCE
 begin
     case 
       when section = 'FILE_ONLY' then
