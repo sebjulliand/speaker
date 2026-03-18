@@ -1,0 +1,22 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+			"type": "IBMiDebug",
+			"request": "launch",
+			"subType": "batch",
+			"name": "Debug DEBUGME",
+			"user": "SJULLIAND",
+			"password": "${command:AskForPassword}",
+			"host": "seiden.iinthecloud.com",
+			"port": 8005,
+			"library": "SJULLIAND",
+			"program": "DEBUGME",
+			"startBatchJobCommand": "SBMJOB CMD(CALL PGM(SJULLIAND/DEBUGME) PARM('HELLO'))",
+			"updateProductionFiles": false
+		}
+  ]
+}
