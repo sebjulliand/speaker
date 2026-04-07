@@ -15,3 +15,26 @@ Ever wondered if you could use Jenkins with IBM i? Guess what, you can! Designin
 VS Code marketplace hosts thousands and thousands of extensions. Dozen of developers created extensions that use extend Code for IBM i. Why not yours? Give it a shot, it's easier than it looks!
 Join this session to learn about the fundamentals of VS Code extension coding, through a live, step by step approach. Discover how you can access the API exposed by Code for IBM i to run commands or Db2 for i queries on IBM i.
 Everybody is welcome, whether you're looking to get started on VS Code extension development or learn new development tricks.
+
+# Debugging IBM i from VS Code
+Are you troubled when debugging from VS Code?
+Do you experience feelings of dread when starting the Debug Service?
+Have you or your coworkers actually been struggling to debug ILE from VS Code?
+If the answer is yes, then don't wait another minute. Just register for this webinar and get in touch with the professionals - Debuggerbusters !
+
+Woops, wrong movie! But right topic!
+
+It is time to learn how to properly debug ILE from VS Code - and believe it, it's not that hard once everything is set up correctly! So...who you gonna call? Seb Julliand!
+Seb has a long history (as in "love and hate relationship") of interfacing the IBM i Debug Service with Code for IBM i and knows quite a bit about it.
+From the architecture of the debugger to an actual live debugging session, Seb will take you on grand debugging tour:
+- Prerequisites
+- How it works
+- Configure and start the debug service from iNavigator
+- Common pitfalls
+- How to debug a program call
+- How to work with Service Entry Points
+- Variables, Breakpoints, Confitions, Watch
+
+Join this session to finally be comfortable when it comes to debbugging from your favorite IDE.
+
+Ain't afraid of no questions!
