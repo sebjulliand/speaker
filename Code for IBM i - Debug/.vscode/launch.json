@@ -17,6 +17,16 @@
 			"program": "DEBUGMETOO",
 			"startBatchJobCommand": "SBMJOB CMD(CALL PGM(SJULLIAND/DEBUGMETOO))",
 			"updateProductionFiles": false
+		},
+		{
+			"type": "IBMiDebug",
+			"request": "attach",
+			"name": "IBM i Debug: Attach to a running job",
+			"user": "SJULLIAND",
+			"password": "${command:AskForPassword}",
+			"host": "seiden.iinthecloud.com",
+			"port": 8005,
+			"jobId": "758881/SJULLIAND/QDFTJOBD"
 		}
   ]
 }
