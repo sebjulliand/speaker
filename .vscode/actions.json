@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Create RPGLE Program",
+    "command": "CRTBNDRPG PGM(&CURLIB/&NAME) SRCSTMF('&RELATIVEPATH') OPTION(*EVENTF) DBGVIEW(&DEBUG_VIEW) TGTCCSID(*JOB)",
+    "deployFirst": true,
+    "environment": "ile",
+    "extensions": [
+      "RPGLE"
+    ],
+    "type": "file"
+  },
+  {
+    "name": "Create RPGLE Module",
+    "command": "CRTRPGMOD MODULE(&CURLIB/&NAME) SRCSTMF('&RELATIVEPATH') OPTION(*EVENTF) DBGVIEW(&DEBUG_VIEW) TGTCCSID(*JOB)",
+    "deployFirst": true,
+    "environment": "ile",
+    "extensions": [
+      "RPGLE"
+    ],
+    "type": "file"
+  },
+  {
+    "name": "Create SQLRPGLE Program",
+    "command": "CRTSQLRPGI OBJ(&CURLIB/&NAME) SRCSTMF('&RELATIVEPATH') OPTION(*EVENTF) DBGVIEW(&DEBUG_VIEW) CLOSQLCSR(*ENDMOD) CVTCCSID(*JOB) COMPILEOPT('TGTCCSID(*JOB)') RPGPPOPT(*LVL2)",
+    "deployFirst": true,
+    "environment": "ile",
+    "extensions": [
+      "SQLRPGLE"
+    ],
+    "type": "file"
+  },
+  {
+    "name": "Create SQLRPGLE Module",
+    "command": "CRTSQLRPGI OBJ(&CURLIB/&NAME) SRCSTMF('&RELATIVEPATH') OBJTYPE(*MODULE) OPTION(*EVENTF) DBGVIEW(&DEBUG_VIEW) CLOSQLCSR(*ENDMOD) CVTCCSID(*JOB) COMPILEOPT('TGTCCSID(*JOB)') RPGPPOPT(*LVL2)",
+    "deployFirst": true,
+    "environment": "ile",
+    "extensions": [
+      "SQLRPGLE"
+    ],
+    "type": "file"
+  },
+  {
+    "name": "Build",
+    "type": "file",
+    "environment": "pase",
+    "command": "./examples/debug/build.sh &CURLIB &DEBUG_VIEW",
+    "extensions": [
+      "GLOBAL"
+    ],
+    "refresh": "no",
+    "runOnProtected": false,
+    "deployFirst": true,
+    "postDownload": [
+      "examples/debug/.logs"
+    ]
+  },
+  {
+    "extensions": [
+      "CLP",
+      "CLLE"
+    ],
+    "name": "Create Bound CL Program",
+    "command": "CRTBNDCL PGM(&CURLIB/&NAME) SRCSTMF('&RELATIVEPATH') OPTION(*EVENTF) DBGVIEW(&DEBUG_VIEW)",
+    "deployFirst": true,
+    "environment": "ile",
+    "type": "file"
+  },
+  {
+    "extensions": [
+      "PF"
+    ],
+    "name": "Create Physical file",
+    "command": "CRTPF FILE(&CURLIB/&NAME) SRCFILE(&SRCFILE) SRCMBR(&NAME) OPTION(*EVENTF) SIZE(*NOMAX) MAXMBRS(1)",
+    "deployFirst": true,
+    "environment": "ile",
+    "type": "file",
+    "refresh": "no",
+    "runOnProtected": false
+  }
+]

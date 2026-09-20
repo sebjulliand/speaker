@@ -4,6 +4,16 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+		{
+			"type": "IBMiDebug",
+			"request": "attach",
+			"name": "IBM i Debug: Attach to a running job",
+			"user": "",
+			"password": "${command:AskForPassword}",
+			"host": "",
+			"port": 8005,
+			"jobId": ""
+		},
     {
 			"type": "IBMiDebug",
 			"request": "launch",
@@ -14,8 +24,8 @@
 			"host": "seiden.iinthecloud.com",
 			"port": 8005,
 			"library": "SJULLIAND",
-			"program": "DEBUGMETOO",
-			"startBatchJobCommand": "SBMJOB CMD(CALL PGM(SJULLIAND/DEBUGMETOO))",
+			"program": "DEBUGME",
+			"startBatchJobCommand": "SBMJOB CMD(CALL PGM(&CURLIB/DEBUGME) PARM('POWERUP' 6))",
 			"updateProductionFiles": false
 		},
 		{
