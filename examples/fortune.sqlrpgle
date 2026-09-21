@@ -13,14 +13,14 @@ Dcl-Proc FORTUNE;
   exec SQL
     Values http_get('https://api.justyy.workers.dev/api/fortune', '') into :response;
 
-  resp onse = %scanrpl('Ö"':'"':
+  response = %scanrpl('Ö"':'"':
     %scanrpl('Ön':'':
     %scanrpl('Öt':' ':
     %subst(response : 2 : %Len(response)-2))));
   snd-msg %Char(response);
 
   Exec SQL
-    Create Or Rep lace Table FORTUNES (
+    Create Or Replace Table FORTUNES (
       ID integer as identity,
       MESSAGE varchar(5000),
       CREATED timestamp default current_timestamp
