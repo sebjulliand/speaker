@@ -1,0 +1,5 @@
+**free
+Dcl-Pr Divide;
+  in_num1 packed(15:5) const;
+  in_num2 packed(15:5) const;
+End-Pr;

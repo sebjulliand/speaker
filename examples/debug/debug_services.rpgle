@@ -1,10 +1,12 @@
 **FREE
-Ctl-Opt Main(KABOOM);
+Ctl-Opt NoMain;
 
-Dcl-Proc KABOOM;
+/include 'debug_services.rpgleinc'
+
+Dcl-Proc Divide export;
   Dcl-Pi *N;
-    in_num1 packed(15:5);
-    in_num2 packed(15:5);
+    in_num1 packed(15:5) const;
+    in_num2 packed(15:5) const;
   End-Pi;
   
   dcl-s total packed(15:5);

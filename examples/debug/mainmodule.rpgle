@@ -5,6 +5,7 @@ dcl-pr GetLibraryList EXTPROC('GETLIBL');
   ou_library_list char(2750);
 end-pr;
 
+/include 'debug_services.rpgleinc'
 
 Dcl-Proc DEBUGMETOO;
   dcl-ds library_list dim(250) Qualified;
@@ -25,4 +26,6 @@ Dcl-Proc DEBUGMETOO;
   for index = 1 to libraryCount;
     snd-msg 'Library ' + %char(index) + ' : ' + library_list(index);
   endFor;
+
+  divide(5:2);
 End-Proc;
