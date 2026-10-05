@@ -51,7 +51,7 @@ Union All
 Select * From SQLObjects;
 
 -- Bindings
-SELECT * FR   dsOM QTEMP/NETSTAT whre remote_address = :w_remoteAddress and local_port = ?;
+SELECT * FROM QTEMP/NETSTAT where remote_address = :w_remoteAddress and local_port = ?;
 bind: '0.0.0.0' 21; -- run to select FTP server job
 bind: '0.0.0.0' 23; -- run to select Telnet server job
 bind: '0.0.0.0' 22; -- run to select SSH server job
