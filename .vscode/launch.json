@@ -13,7 +13,7 @@
 			"password": "${command:AskForPassword}",
 			"host": "seiden.iinthecloud.com",
 			"port": 8005,
-			"library": "SJULLIAND",
+			"library": "DEBUGDEMO",
 			"program": "DEBUGME",
 			"startBatchJobCommand": "SBMJOB CMD(CALL PGM(DEBUGDEMO/DEBUGME) PARM('Hello Sweden' 6))",
 			"updateProductionFiles": false
